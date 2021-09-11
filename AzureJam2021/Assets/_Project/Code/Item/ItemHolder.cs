@@ -6,6 +6,7 @@ public class ItemHolder : MonoBehaviour
 {
     [Header("Item Slots")]
     [SerializeField] private Item _currentItem;
+    public Item CurrentItem { get { return _currentItem; } private set { _currentItem = value; } }
     [SerializeField] private GameObject _mask;
     [SerializeField] private GameObject _coat;
     [SerializeField] private GameObject _hazmat;
@@ -21,26 +22,26 @@ public class ItemHolder : MonoBehaviour
     private void EquipItem(Item item)
     {
         if (item == null) return;
-        if (_currentItem == item) return;
+        if (CurrentItem == item) return;
 
-        _currentItem = item;
-        if (_currentItem.ItemType == ItemType.Mask)
+        CurrentItem = item;
+        if (CurrentItem.ItemType == ItemType.Mask)
         {
             EnableItem(_mask);
         }
-        else if (_currentItem.ItemType == ItemType.Coat)
+        else if (CurrentItem.ItemType == ItemType.Coat)
         {
             EnableItem(_coat);
         }
-        else if (_currentItem.ItemType == ItemType.Hazmat)
+        else if (CurrentItem.ItemType == ItemType.Hazmat)
         {
             EnableItem(_hazmat);
         }
-        else if (_currentItem.ItemType == ItemType.RubberDucky)
+        else if (CurrentItem.ItemType == ItemType.RubberDucky)
         {
             EnableItem(_rubberDucky);
         }
-        else if (_currentItem.ItemType == ItemType.Boots)
+        else if (CurrentItem.ItemType == ItemType.Boots)
         {
             EnableItem(_boots);
         }

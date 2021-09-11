@@ -43,12 +43,12 @@ public class Health : MonoBehaviour
     private IEnumerator ApplyAmountOverTime(float amount, float duration)
     {
         float time = 0;
-        float modifyAmount = (amount * Time.deltaTime) / duration;
+        float modifyAmount = amount / duration;
         while (time < duration)
         {
-            yield return null;
-            time += Time.deltaTime;
             ApplyAmount(modifyAmount);
+            time++;
+            yield return new WaitForSeconds(1);            
         }
     }
 }

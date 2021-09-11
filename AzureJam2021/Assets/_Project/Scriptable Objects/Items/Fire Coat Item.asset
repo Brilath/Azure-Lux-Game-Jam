@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a160b5a915ae4f4a9a78f3b53c4b37c, type: 3}
-  m_Name: Coat Item
+  m_Name: Fire Coat Item
   m_EditorClassIdentifier: 
-  _name: Coat Item
+  _name: Fire Coat Item
   _itemType: 2
   _uIImage: {fileID: 6840524271816180818, guid: 085f21a2b51daad4b8382dee0645876e, type: 3}
