@@ -77,6 +77,13 @@ public class PlayfabController : MonoBehaviour
         Register(username, password);
         Username = username;
     }
+    public void Logout()
+    {
+        Username = "";
+        PlayfabId = "";
+        EntityToken = null;
+        SessionTicket = "";
+    }
     #endregion
 
     #region Playfab Callbacks
@@ -86,7 +93,7 @@ public class PlayfabController : MonoBehaviour
         PlayfabId = result.PlayFabId;
         EntityToken = result.EntityToken;
         SessionTicket = result.SessionTicket;
-        SceneController.LoadScene("MainMenu");
+        SceneController.LoadScene("Main Menu");
     }
     private void OnRegisterSuccess(RegisterPlayFabUserResult result)
     {
@@ -94,7 +101,7 @@ public class PlayfabController : MonoBehaviour
         PlayfabId = result.PlayFabId;
         EntityToken = result.EntityToken;
         SessionTicket = result.SessionTicket;
-        SceneController.LoadScene("MainMenu");
+        SceneController.LoadScene("Main Menu");
     }
     private void OnFailure(PlayFabError error)
     {

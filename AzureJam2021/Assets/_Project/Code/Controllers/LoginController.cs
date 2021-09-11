@@ -27,7 +27,6 @@ public class LoginController : MonoBehaviour
     {
         PlayfabController.Instance.OnError += HandlePlayfabError;
     }
-
     private void OnDestroy()
     {
         PlayfabController.Instance.OnError -= HandlePlayfabError;
