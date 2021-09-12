@@ -18,6 +18,11 @@ public class ItemHolder : MonoBehaviour
         Debug.Log($"Giving sheep an item {item.Name}!");
         EquipItem(item);
     }
+    public void ConsumeItem()
+    {
+        CurrentItem = null;
+        DisableItem();
+    }
 
     private void EquipItem(Item item)
     {
@@ -55,5 +60,14 @@ public class ItemHolder : MonoBehaviour
         _rubberDucky.SetActive(false);
         _boots.SetActive(false);
         item.SetActive(true);
+    }
+
+    private void DisableItem()
+    {
+        _mask.SetActive(false);
+        _coat.SetActive(false);
+        _hazmat.SetActive(false);
+        _rubberDucky.SetActive(false);
+        _boots.SetActive(false);
     }
 }

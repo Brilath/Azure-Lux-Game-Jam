@@ -9,6 +9,8 @@ public class Item : ScriptableObject
     public ItemType ItemType { get { return _itemType; } private set { _itemType = value; } }
     [SerializeField] private Sprite _uIImage;
     public Sprite UIImage { get { return _uIImage; } private set { _uIImage = value; } }
+    [SerializeField] private Color _itemColor;
+    public Color ItemColor { get { return _itemColor; } private set { _itemColor = value; } }
 }
 
 public enum ItemType

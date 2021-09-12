@@ -41,6 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fence
+    uniqueID: 385188997
+    locked: 0
+  - name: Hazard
+    uniqueID: 4210203131
+    locked: 0
+  - name: Player
+    uniqueID: 2156201015
+    locked: 0
   - name: Item
     uniqueID: 2183542825
     locked: 0

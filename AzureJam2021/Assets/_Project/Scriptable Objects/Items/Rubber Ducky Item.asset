@@ -15,3 +15,4 @@ MonoBehaviour:
   _name: Rubber Ducky Item
   _itemType: 4
   _uIImage: {fileID: 2128812470676007574, guid: 733c070f4424a5e43b2d239c91db69bb, type: 3}
+  _itemColor: {r: 0.14901961, g: 0.7882353, b: 0.8, a: 1}

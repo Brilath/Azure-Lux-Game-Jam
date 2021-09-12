@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,7 @@ public class Health : MonoBehaviour
     [SerializeField] private float _currentLife;
 
     [Header("UI")]
-    [SerializeField] private Image _healthBarImage;
+    [SerializeField] private Image _healthBarImage;   
 
     private void Awake()
     {

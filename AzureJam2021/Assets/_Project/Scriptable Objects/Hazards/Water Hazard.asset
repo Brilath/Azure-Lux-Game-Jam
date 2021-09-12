@@ -17,5 +17,6 @@ MonoBehaviour:
   _damage: -65
   _damageTime: 0
   _itemCounter: 4
-  _spriteImage: {fileID: -2660968328804394481, guid: 829c6a5f28434dd46965c29aa52734f0, type: 3}
-  _uIImage: {fileID: -2660968328804394481, guid: 829c6a5f28434dd46965c29aa52734f0, type: 3}
+  _spriteImage: {fileID: 8509550459451208454, guid: 2dab88f4594a12e4d9ac8ba4573450b0, type: 3}
+  _uIImage: {fileID: 8509550459451208454, guid: 2dab88f4594a12e4d9ac8ba4573450b0, type: 3}
+  _particleColor: {r: 0.15016668, g: 0.7882353, b: 0.8018868, a: 1}

@@ -3,12 +3,13 @@ using UnityEngine;
 public class HazardObject : MonoBehaviour
 {
     [SerializeField] private Hazard _currentHazard;
-    
+    [SerializeField] private ParticleSystem _particleSystem;
     private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
+        _particleSystem = GetComponentInChildren<ParticleSystem>();
     }
 
     private void Start()
@@ -22,6 +23,8 @@ public class HazardObject : MonoBehaviour
     {
         _currentHazard = hazard;
         _spriteRenderer.sprite = _currentHazard.SpriteImage;
+        var main = _particleSystem.main;
+        main.startColor = _currentHazard.ParticleColor;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,6 +47,7 @@ public class HazardObject : MonoBehaviour
                 health.ModifyHealth(_currentHazard.Damage);
             }
         }
+        itemHolder.ConsumeItem();
         gameObject.SetActive(false);
     }
 }

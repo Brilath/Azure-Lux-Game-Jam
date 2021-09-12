@@ -15,3 +15,4 @@ MonoBehaviour:
   _name: Boots Item
   _itemType: 1
   _uIImage: {fileID: -2241300882062069919, guid: 20ad5fde04e78e94f98849139a371c01, type: 3}
+  _itemColor: {r: 0.8980392, g: 0.7176471, b: 0.11372549, a: 1}

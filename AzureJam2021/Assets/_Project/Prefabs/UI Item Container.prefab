@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _uiItemImage: {fileID: 783564403423365932}
+  _uiItemBackgroundImage: {fileID: 783564403698619602}
 --- !u!1 &783564403698619606
 GameObject:
   m_ObjectHideFlags: 0

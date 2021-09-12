@@ -15,3 +15,4 @@ MonoBehaviour:
   _name: Hazmat Item
   _itemType: 3
   _uIImage: {fileID: 6569990619987329317, guid: 6877d24322666b143935d2c469de5591, type: 3}
+  _itemColor: {r: 0.8509804, g: 0.35686275, b: 0.70980394, a: 1}

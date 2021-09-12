@@ -19,7 +19,7 @@ public class Motor : MonoBehaviour
         _direction.y = 1;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         _body.velocity = _direction * _moveSpeed * Time.deltaTime;
     }
