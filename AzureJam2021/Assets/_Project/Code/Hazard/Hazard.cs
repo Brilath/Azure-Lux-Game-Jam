@@ -9,8 +9,10 @@ public class Hazard : ScriptableObject
     public bool IsDamageOverTime { get { return _isDamageOverTime; } private set { _isDamageOverTime = value; } }
     [SerializeField] private float _damage;
     public float Damage { get { return _damage; } private set { _damage = value; } }
-    [SerializeField] private float _damageTime;
-    public float DamageTime { get { return _damageTime; } private set { _damageTime = value; } }
+    [SerializeField] private float _duration;
+    public float Duration { get { return _duration; } private set { _duration = value; } }
+    [SerializeField] private HazardType _type;
+    public HazardType Type { get { return _type; } private set { _type = value; } }
     [SerializeField] private ItemType _itemCounter;
     public ItemType ItemCounter { get { return _itemCounter; } private set { _itemCounter = value; } }
     [SerializeField] private Sprite _spriteImage;
@@ -19,4 +21,13 @@ public class Hazard : ScriptableObject
     public Sprite UIImage { get { return _uIImage; } private set { _uIImage = value; } }
     [SerializeField] private Color _particleColor;
     public Color ParticleColor { get { return _particleColor; } private set { _particleColor = value; } }
+}
+
+public enum HazardType
+{
+    Chemical,
+    Gas,
+    Fire,
+    Water,
+    Electrical
 }

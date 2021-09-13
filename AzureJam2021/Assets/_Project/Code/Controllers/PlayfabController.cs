@@ -1,6 +1,7 @@
 using PlayFab;
 using PlayFab.ClientModels;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayfabController : MonoBehaviour
@@ -84,6 +85,22 @@ public class PlayfabController : MonoBehaviour
         EntityToken = null;
         SessionTicket = "";
     }
+    public void RecordScore(int score)
+    {
+        Debug.Log($"Requesting PlayFab to update {Username} score");
+        var request = new UpdatePlayerStatisticsRequest
+        {
+            Statistics = new List<StatisticUpdate>
+            {
+                new StatisticUpdate
+                {
+                    StatisticName = "FlockScore",
+                    Value = score
+                }
+            }
+        };
+        PlayFabClientAPI.UpdatePlayerStatistics(request, OnLeaderboardUpdate, OnError);
+    }
     #endregion
 
     #region Playfab Callbacks
@@ -102,6 +119,10 @@ public class PlayfabController : MonoBehaviour
         EntityToken = result.EntityToken;
         SessionTicket = result.SessionTicket;
         SceneController.LoadScene("Main Menu");
+    }
+    private void OnLeaderboardUpdate(UpdatePlayerStatisticsResult result)
+    {
+        Debug.Log($"Updated Leaderboard");
     }
     private void OnFailure(PlayFabError error)
     {

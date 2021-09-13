@@ -15,7 +15,7 @@ MonoBehaviour:
   _name: Chemical Hazard
   _isDamageOverTime: 1
   _damage: -30
-  _damageTime: 15
+  _duration: 10
   _itemCounter: 3
   _spriteImage: {fileID: 7581305520753337138, guid: c058fb1bf8bd7484bb96ad13e85fda8a, type: 3}
   _uIImage: {fileID: 7581305520753337138, guid: c058fb1bf8bd7484bb96ad13e85fda8a, type: 3}

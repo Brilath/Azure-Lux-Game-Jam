@@ -15,7 +15,8 @@ MonoBehaviour:
   _name: Fire Hazard
   _isDamageOverTime: 1
   _damage: -60
-  _damageTime: 5
+  _duration: 5
+  _type: 2
   _itemCounter: 2
   _spriteImage: {fileID: 8334651344603559088, guid: cb6f0d434b89b1c42b6e355e495e43db, type: 3}
   _uIImage: {fileID: 8334651344603559088, guid: cb6f0d434b89b1c42b6e355e495e43db, type: 3}

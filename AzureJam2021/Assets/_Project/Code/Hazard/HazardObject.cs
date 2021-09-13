@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class HazardObject : MonoBehaviour
@@ -5,6 +6,8 @@ public class HazardObject : MonoBehaviour
     [SerializeField] private Hazard _currentHazard;
     [SerializeField] private ParticleSystem _particleSystem;
     private SpriteRenderer _spriteRenderer;
+
+    public static Action<Sheep,Hazard> OnSpreadHazard = delegate { };
 
     private void Awake()
     {
@@ -40,7 +43,8 @@ public class HazardObject : MonoBehaviour
             Debug.Log($"Applying {_currentHazard.Damage} damage to {sheep.name}");
             if (_currentHazard.IsDamageOverTime)
             {
-                health.ModifyHealthOverTime(_currentHazard.Damage, _currentHazard.DamageTime);
+                health.ModifyHealthOverTime(_currentHazard.Damage, _currentHazard.Duration);
+                OnSpreadHazard?.Invoke(sheep,_currentHazard);
             }
             else
             {

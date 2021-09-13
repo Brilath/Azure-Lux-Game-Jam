@@ -15,7 +15,8 @@ MonoBehaviour:
   _name: Gas Hazard
   _isDamageOverTime: 1
   _damage: -25
-  _damageTime: 8
+  _duration: 15
+  _type: 1
   _itemCounter: 0
   _spriteImage: {fileID: 21300000, guid: 626131a40eb81a2478121ba1f2299b64, type: 3}
   _uIImage: {fileID: 21300000, guid: 626131a40eb81a2478121ba1f2299b64, type: 3}

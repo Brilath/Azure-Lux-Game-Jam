@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class ItemHolder : MonoBehaviour
     [SerializeField] private GameObject _hazmat;
     [SerializeField] private GameObject _rubberDucky;
     [SerializeField] private GameObject _boots;
+
+    public static Action<Item> OnItemEquiped = delegate { };
 
     public void GiveItem(Item item)
     {
@@ -30,6 +33,7 @@ public class ItemHolder : MonoBehaviour
         if (CurrentItem == item) return;
 
         CurrentItem = item;
+        OnItemEquiped?.Invoke(CurrentItem);
         if (CurrentItem.ItemType == ItemType.Mask)
         {
             EnableItem(_mask);
@@ -49,7 +53,7 @@ public class ItemHolder : MonoBehaviour
         else if (CurrentItem.ItemType == ItemType.Boots)
         {
             EnableItem(_boots);
-        }
+        }        
     }
 
     private void EnableItem(GameObject item)

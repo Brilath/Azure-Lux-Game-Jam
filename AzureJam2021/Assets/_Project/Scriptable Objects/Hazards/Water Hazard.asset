@@ -15,7 +15,8 @@ MonoBehaviour:
   _name: Water
   _isDamageOverTime: 0
   _damage: -65
-  _damageTime: 0
+  _duration: 0
+  _type: 3
   _itemCounter: 4
   _spriteImage: {fileID: 8509550459451208454, guid: 2dab88f4594a12e4d9ac8ba4573450b0, type: 3}
   _uIImage: {fileID: 8509550459451208454, guid: 2dab88f4594a12e4d9ac8ba4573450b0, type: 3}

@@ -50,7 +50,7 @@ public class CameraController : MonoBehaviour
     }
     private void SetTarget(Sheep sheep)
     {
-        vcam.Follow = sheep.transform;
+        vcam.Follow = sheep.FollowPoint;
         _currentSheepTarget = sheep;
         if (_sheepTargets.Contains(sheep))
             _sheepTargets.Remove(sheep);

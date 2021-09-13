@@ -15,7 +15,8 @@ MonoBehaviour:
   _name: Electrical Hazard
   _isDamageOverTime: 0
   _damage: -45
-  _damageTime: 0
+  _duration: 0
+  _type: 4
   _itemCounter: 1
   _spriteImage: {fileID: -5629406071698635567, guid: 13fde3d3a9cd7ea45b33fd3d1a7e649b, type: 3}
   _uIImage: {fileID: -5629406071698635567, guid: 13fde3d3a9cd7ea45b33fd3d1a7e649b, type: 3}
