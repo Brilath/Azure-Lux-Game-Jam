@@ -14,4 +14,10 @@ public class GameSound : MonoBehaviour
     {
         _audioSource.PlayOneShot(clip);
     }
+
+    public void Initialize(AudioClip clip,float volume)
+    {
+        _audioSource.volume = volume;
+        _audioSource.PlayOneShot(clip);
+    }
 }

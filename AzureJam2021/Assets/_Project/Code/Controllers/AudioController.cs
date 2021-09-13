@@ -41,7 +41,7 @@ public class AudioController : MonoBehaviour
     private void HandleItemEqupied(Item item)
     {
         GameSound gameSound = Instantiate(_gameSoundPrefab, transform.position, Quaternion.identity);
-        gameSound.Initialize(item.ItemSound);
+        gameSound.Initialize(item.ItemSound, 1f);
     }
 
     private void CheckForSheep(GameObject testObject)

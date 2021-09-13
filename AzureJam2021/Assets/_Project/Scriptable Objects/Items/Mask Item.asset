@@ -16,4 +16,4 @@ MonoBehaviour:
   _itemType: 0
   _uIImage: {fileID: 8528137531322026537, guid: 5548973daad6f15408a611572fbf7a7c, type: 3}
   _itemColor: {r: 0.1254902, g: 0.77254903, b: 0.07058824, a: 1}
-  _itemSound: {fileID: 8300000, guid: e304e74d84a1b4c4da2879cee45bbd8b, type: 3}
+  _itemSound: {fileID: 8300000, guid: 8fd7d4f365b2517479ceaca98f8c2060, type: 3}
