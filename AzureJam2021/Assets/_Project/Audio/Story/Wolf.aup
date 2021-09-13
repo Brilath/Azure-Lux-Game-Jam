@@ -1,17 +1,9 @@
 <?xml version="1.0" standalone="no" ?>
 <!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
-<project xmlns="http://audacity.sourceforge.net/xml/" projname="Wolf_data" version="1.3.0" audacityversion="2.3.3" sel0="1.5789569161" sel1="3.0019047619" vpos="192" h="0.0000000000" zoom="86.1328125000" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="Wolf_data" version="1.3.0" audacityversion="2.3.3" sel0="0.0928798186" sel1="5.3870294785" vpos="0" h="0.0000000000" zoom="86.1328125000" rate="44100.0" snapto="off" selectionformat="hh:mm:ss + milliseconds" frequencyformat="Hz" bandwidthformat="octaves">
 	<tags/>
-	<wavetrack name="Sheep_Reply" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
-		<waveclip offset="0.00000000" colorindex="0">
-			<sequence maxsamples="262144" sampleformat="262159" numsamples="62526">
-				<waveblock start="0">
-					<simpleblockfile filename="e0808edb.au" len="62526" min="-0.439266" max="0.471444" rms="0.059981"/>
-				</waveblock>
-			</sequence>
-			<envelope numpoints="0"/>
-		</waveclip>
-		<waveclip offset="3.20435374" colorindex="0">
+	<wavetrack name="Sheep_Reply" isSelected="1" height="160" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="3.23410431" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="98891">
 				<waveblock start="0">
 					<simpleblockfile filename="e0808a5e.au" len="98891" min="-0.273736" max="0.258364" rms="0.046958"/>
@@ -19,17 +11,17 @@
 			</sequence>
 			<envelope numpoints="0"/>
 		</waveclip>
-	</wavetrack>
-	<wavetrack name="Sheep_Reply" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="0.00000000" colorindex="0">
-			<sequence maxsamples="262144" sampleformat="262159" numsamples="62526">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="43415">
 				<waveblock start="0">
-					<simpleblockfile filename="e0808674.au" len="62526" min="-0.43924" max="0.472092" rms="0.059981"/>
+					<simpleblockfile filename="e0808eb8.au" len="43415" min="-0.353358" max="0.316401" rms="0.056458"/>
 				</waveblock>
 			</sequence>
 			<envelope numpoints="0"/>
 		</waveclip>
-		<waveclip offset="3.20435374" colorindex="0">
+	</wavetrack>
+	<wavetrack name="Sheep_Reply" isSelected="1" height="140" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+		<waveclip offset="3.23410431" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="98891">
 				<waveblock start="0">
 					<simpleblockfile filename="e0808c7d.au" len="98891" min="-0.285665" max="0.250097" rms="0.046842"/>
@@ -37,8 +29,16 @@
 			</sequence>
 			<envelope numpoints="0"/>
 		</waveclip>
+		<waveclip offset="0.00000000" colorindex="0">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="43415">
+				<waveblock start="0">
+					<simpleblockfile filename="e080875e.au" len="43415" min="-0.343213" max="0.328027" rms="0.056251"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
 	</wavetrack>
-	<wavetrack name="Wolf_minion3" isSelected="1" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="Wolf_minion3" isSelected="0" height="150" minimized="0" channel="0" linked="1" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="1.57895692" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="62752">
 				<waveblock start="0">
@@ -48,7 +48,7 @@
 			<envelope numpoints="0"/>
 		</waveclip>
 	</wavetrack>
-	<wavetrack name="Wolf_minion3" isSelected="1" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
+	<wavetrack name="Wolf_minion3" isSelected="0" height="150" minimized="0" channel="1" linked="0" mute="0" solo="0" rate="44100" gain="1.0" pan="0.0" colorindex="0">
 		<waveclip offset="1.57895692" colorindex="0">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="62752">
 				<waveblock start="0">
