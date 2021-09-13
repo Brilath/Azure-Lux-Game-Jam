@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Motor : MonoBehaviour
 {
+    [SerializeField] private float _baseMoveSpeed;
     [SerializeField] private float _moveSpeed;
     [SerializeField] private Vector2 _direction;
     [SerializeField] private bool _canBeControlled;
@@ -15,10 +16,13 @@ public class Motor : MonoBehaviour
     private void Awake()
     {
         _body = GetComponent<Rigidbody2D>();
+        GameController.OnGameStart += HandleGameStart;
         GameController.OnGameOver += HandleGameOver;
     }
+
     private void OnDestroy()
     {
+        GameController.OnGameStart -= HandleGameStart;
         GameController.OnGameOver -= HandleGameOver;
     }
 
@@ -31,6 +35,11 @@ public class Motor : MonoBehaviour
     private void FixedUpdate()
     {
         _body.velocity = _direction * _moveSpeed * Time.deltaTime;
+    }
+
+    private void HandleGameStart()
+    {
+        _moveSpeed = _baseMoveSpeed;
     }
 
     private void HandleGameOver()

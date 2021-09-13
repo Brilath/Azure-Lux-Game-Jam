@@ -15,11 +15,13 @@ public class PlayfabController : MonoBehaviour
     public EntityTokenResponse EntityToken { get { return _entityToken; } private set { _entityToken = value; } }
     [SerializeField] private string _sessionTicket;
     public string SessionTicket { get { return _sessionTicket; } private set { _sessionTicket = value; } }
+    public GetLeaderboardResult CurrentLeaderboard { get; private set; }
 
     private static PlayfabController _instance;
     public static PlayfabController Instance { get { return _instance; } }
 
     public Action<PlayFabError> OnError = delegate { };
+    public Action OnLeaderboardUpdated = delegate { };
 
     #region Unity Methods
     private void Awake()
@@ -101,6 +103,16 @@ public class PlayfabController : MonoBehaviour
         };
         PlayFabClientAPI.UpdatePlayerStatistics(request, OnLeaderboardUpdate, OnError);
     }
+    public void GetLoaderboard()
+    {
+        var request = new GetLeaderboardRequest
+        {
+            StatisticName = "FlockScore",
+            StartPosition = 0,
+            MaxResultsCount = 25
+        };
+        PlayFabClientAPI.GetLeaderboard(request, OnLeaderboardRequest, OnError);
+    }
     #endregion
 
     #region Playfab Callbacks
@@ -123,6 +135,11 @@ public class PlayfabController : MonoBehaviour
     private void OnLeaderboardUpdate(UpdatePlayerStatisticsResult result)
     {
         Debug.Log($"Updated Leaderboard");
+    }
+    private void OnLeaderboardRequest(GetLeaderboardResult result)
+    {
+        CurrentLeaderboard = result;
+        OnLeaderboardUpdated?.Invoke();
     }
     private void OnFailure(PlayFabError error)
     {

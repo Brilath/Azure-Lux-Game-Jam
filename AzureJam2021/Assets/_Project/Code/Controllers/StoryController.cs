@@ -65,4 +65,9 @@ public class StoryController : MonoBehaviour
     {
         _storyAudioSource.PlayOneShot(storyClip);
     }
+
+    public void SkipStory()
+    {
+        SceneController.LoadScene("Game");
+    }
 }

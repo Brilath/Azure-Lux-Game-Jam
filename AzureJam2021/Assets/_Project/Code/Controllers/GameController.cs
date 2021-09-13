@@ -3,13 +3,16 @@ using System.Linq;
 using UnityEngine;
 using TMPro;
 using System;
+using System.Collections;
 
 public class GameController : MonoBehaviour
 {
     [SerializeField] private List<Sheep> _currentFlock;
     [SerializeField] private TMP_Text _flockCountText;
+    [SerializeField] private TMP_Text _countdownText;
     [SerializeField] private GameObject _menuPanel;
 
+    public static Action OnGameStart = delegate { };
     public static Action OnGameOver = delegate { };
 
     private void Awake()
@@ -21,6 +24,10 @@ public class GameController : MonoBehaviour
     {
         SheepSpawner.OnSheepSpawned -= HandleSheepSpawned;
         Health.OnDeath -= HandleDeath;
+    }
+    private void Start()
+    {
+        StartCoroutine(StartCountdown());
     }
     private void Update()
     {
@@ -84,5 +91,19 @@ public class GameController : MonoBehaviour
         OnGameOver?.Invoke();
         PlayfabController.Instance.RecordScore(_currentFlock.Count);
         ToggleMenu();
+    }
+
+    private IEnumerator StartCountdown()
+    {
+        _countdownText.gameObject.SetActive(true);
+        int time = 3;
+        while(time > 0)
+        {
+            _countdownText.SetText(time.ToString());
+            yield return new WaitForSeconds(1);
+            time--;
+        }
+        _countdownText.gameObject.SetActive(false);
+        OnGameStart?.Invoke();
     }
 }

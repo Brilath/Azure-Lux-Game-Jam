@@ -920,7 +920,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxLife: 60
   _currentLife: 0
-  _isPlayerCharacter: 1
   _healthBarImage: {fileID: 7991677933805771717}
   _deathPrefab: {fileID: 4531666666264846765, guid: 8023ccfa07a06be4a9d8c79fd8dcb64d, type: 3}
 --- !u!114 &7991677933820793918
@@ -935,7 +934,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9603b34b4881f9442a3e0dc8387e6dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 60
+  _baseMoveSpeed: 60
+  _moveSpeed: 0
   _direction: {x: 0, y: 0}
   _canBeControlled: 1
 --- !u!114 &209633957678147062
